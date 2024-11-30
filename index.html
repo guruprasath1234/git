@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h1>Meme Generator</h1>
+        <div class="nav-links">
+            <a href="#login">Login</a>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#editor">Editor</a>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section id="login" class="section">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" placeholder="Username" id="username" required>
+            <input type="email" placeholder="Email" id="email" required>
+            <input type="password" placeholder="Password" id="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="section hidden">
+        <h2>Welcome, <span id="userGreeting">User</span>!</h2>
+        <p>Choose an action to get started:</p>
+        <button id="goToEditor">Create Meme</button>
+    </section>
+
+    <!-- Meme Editor Section -->
+    <section id="editor" class="section hidden">
+        <h2>Meme Editor</h2>
+        <input type="file" id="imageUpload" accept="image/*">
+        <canvas id="memeCanvas"></canvas>
+        <div class="tools">
+            <input type="text" id="memeText" placeholder="Enter text for meme">
+            <button id="addText">Add Text</button>
+            <button id="downloadMeme">Download Meme</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
