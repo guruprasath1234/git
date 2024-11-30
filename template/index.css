@@ -1,0 +1,277 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+.section {
+    padding: 20px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Form Styling */
+form input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 80%;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Canvas and Tools */
+#editor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imageUpload {
+    margin: 10px 0;
+}
+
+#downloadMeme {
+    margin: 10px;
+}
+
+#memeCanvas {
+    border: 1px solid #ddd;
+    max-width: 100%;
+    margin: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links a {
+        margin: 5px 0;
+    }
+}
+/* Login Section Styling */
+#login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4caf50, #81c784);
+}
+
+#login h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30rem;
+    margin-right: 10rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#loginForm {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+#loginForm input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#loginForm input:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+    outline: none;
+}
+
+#loginForm button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #4caf50, #388e3c);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#loginForm button:hover {
+    background: linear-gradient(135deg, #66bb6a, #388e3c);
+    transform: translateY(-3px);
+}
+
+#loginForm button:active {
+    transform: translateY(0);
+}
+
+#loginForm input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    #loginForm {
+        padding: 20px;
+    }
+
+    #loginForm input,
+    #loginForm button {
+        font-size: 1rem;
+    }
+}
+/* Meme Editor Section Styling */
+#editor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fbc02d, #f57f17);
+    padding: 20px;
+    color: #333;
+}
+
+#editor h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#imageUpload {
+    background: #fff;
+    padding: 10px;
+    border: 2px dashed #ffa000;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #666;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+#imageUpload:hover {
+    background: #ffe082;
+    border-color: #ffca28;
+}
+
+#memeCanvas {
+    border: 3px solid #ffa000;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    margin: 20px 0;
+    background-color: #fff;
+}
+
+.tools {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.tools input[type="text"] {
+    padding: 10px 15px;
+    border: 2px solid #ffa000;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
+    max-width: 300px;
+}
+
+.tools input[type="text"]:focus {
+    border-color: #ffca28;
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+}
+
+.tools button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #ffa000, #ff6f00);
+    box-shadow: 0 5px 15px rgba(255, 111, 0, 0.3);
+}
+
+.tools button:hover {
+    background: linear-gradient(135deg, #ffb300, #ff9100);
+    box-shadow: 0 8px 20px rgba(255, 111, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+.tools button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    #editor {
+        padding: 10px;
+    }
+
+    #imageUpload,
+    .tools input[type="text"],
+    .tools button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    #memeCanvas {
+        max-width: 100%;
+    }
+}

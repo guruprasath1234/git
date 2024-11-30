@@ -1,5 +1,6 @@
 // JavaScript for Meme Generator
 
+
 // Handle Login Form
 const loginForm = document.getElementById('loginForm');
 const userGreeting = document.getElementById('userGreeting');
