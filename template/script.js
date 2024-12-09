@@ -1,25 +1,37 @@
-// JavaScript for Meme Generator
-
+// Hide the editor by default
+document.getElementById('editor').classList.add('hidden');
 
 // Handle Login Form
-const loginForm = document.getElementById('loginForm');
+const loginButton = document.getElementById('loginButton');
 const userGreeting = document.getElementById('userGreeting');
 const dashboard = document.getElementById('dashboard');
 const editor = document.getElementById('editor');
 
-loginForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const username = document.getElementById('username').value;
-    userGreeting.textContent = username;
-    alert(`Welcome, ${username}!`);
-    loginForm.parentElement.classList.add('hidden');
-    dashboard.classList.remove('hidden');
-});
-
-// Navigate to Editor
-document.getElementById('goToEditor').addEventListener('click', () => {
+loginButton.addEventListener('click', function() {
+    // Hide login and dashboard sections
+    document.getElementById('login').classList.add('hidden');
     dashboard.classList.add('hidden');
+    
+    // Show the editor section
     editor.classList.remove('hidden');
+    
+    // Change login button to logout button
+    loginButton.innerText = 'Logout';
+    loginButton.classList.remove('bg-green-500', 'hover:bg-green-600');
+    loginButton.classList.add('bg-red-500', 'hover:bg-red-600');
+    
+    // Add event listener to the new logout button
+    loginButton.addEventListener('click', function() {
+        // Reset to login state
+        document.getElementById('login').classList.remove('hidden');
+        dashboard.classList.remove('hidden');
+        editor.classList.add('hidden');
+        
+        // Reset the button back to login
+        loginButton.innerText = 'Login';
+        loginButton.classList.remove('bg-red-500', 'hover:bg-red-600');
+        loginButton.classList.add('bg-green-500', 'hover:bg-green-600');
+    });
 });
 
 // Meme Editor Logic
@@ -27,7 +39,6 @@ const imageUpload = document.getElementById('imageUpload');
 const canvas = document.getElementById('memeCanvas');
 const ctx = canvas.getContext('2d');
 const memeText = document.getElementById('memeText');
-
 let image = null;
 
 imageUpload.addEventListener('change', (e) => {
@@ -51,7 +62,7 @@ document.getElementById('addText').addEventListener('click', () => {
     ctx.fillStyle = 'white';
     ctx.strokeStyle = 'black';
     ctx.lineWidth = 2;
-    ctx.fillText(text, 20, 50);
+    ctx.fillText(text, 20, 50);  // Position the text at (20, 50)
     ctx.strokeText(text, 20, 50);
 });
 
