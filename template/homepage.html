@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meme Generator Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-gray-50">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full backdrop-blur-md bg-white/30 z-50 shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <!-- Logo with smaller size -->
+            <img src="logo.png" alt="Logo" class="w-12 h-12 rounded-lg shadow-lg">
+            <!-- Meme Generator text -->
+            <a href="index.html" class="text-xl font-bold text-orange-600">MemeGenerator</a>
+        </div>
+        <div class="flex space-x-4">
+            <!-- Login Button -->
+            <a href="index.html" class="bg-orange-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-orange-700">
+                Login
+            </a>
+            <!-- Sign In Button -->
+            <a href="sign-in-here.html" class="bg-yellow-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-yellow-600">
+                Sign In
+            </a>
+        </div>
+    </div>
+</nav>
+
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-yellow-400 to-orange-500 min-h-screen flex flex-col justify-center items-center text-center text-white pt-20">
+    <h1 class="text-5xl font-extrabold mb-4">Unleash Your Inner Meme Creator!</h1>
+    <p class="text-lg mb-8">Create, edit, and share memes in just a few clicks!</p>
+    <div class="flex space-x-4 mb-8">
+      <a href="index.html" class="bg-white text-orange-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-yellow-100">
+        Start Creating
+      </a>
+    </div>
+    <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('https://source.unsplash.com/800x600/?fun,memes');"></div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-16 bg-white text-gray-800">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Features</h2>
+      <div class="grid md:grid-cols-3 gap-12">
+        <div class="text-center">
+          <div class="bg-yellow-100 w-16 h-16 flex items-center justify-center rounded-full mx-auto mb-4">
+            <ion-icon name="cloud-upload" class="text-yellow-500 text-3xl"></ion-icon>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Upload Your Image</h3>
+          <p class="text-gray-600">Easily upload your favorite pictures or choose from our library.</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-yellow-100 w-16 h-16 flex items-center justify-center rounded-full mx-auto mb-4">
+            <ion-icon name="create" class="text-yellow-500 text-3xl"></ion-icon>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Add Text and Stickers</h3>
+          <p class="text-gray-600">Customize your meme with text and funny stickers.</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-yellow-100 w-16 h-16 flex items-center justify-center rounded-full mx-auto mb-4">
+            <ion-icon name="download" class="text-yellow-500 text-3xl"></ion-icon>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Download Instantly</h3>
+          <p class="text-gray-600">Save your meme and share it with friends effortlessly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Showcase -->
+  <section class="py-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Community Showcase</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <img src="MEME1.png" alt="Meme 1" class="rounded-lg shadow-lg">
+        <img src="MEME2.png" alt="Meme 2" class="rounded-lg shadow-lg">
+        <img src="MEME3.png" alt="Meme 3" class="rounded-lg shadow-lg">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex justify-between items-center">
+        <p>&copy; 2024 Meme Generator. All rights reserved.</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-yellow-400">Terms of Service</a>
+          <a href="#" class="hover:text-yellow-400">Privacy Policy</a>
+          <a href="#" class="hover:text-yellow-400">Newsletter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
