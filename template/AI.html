@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Image</title>
+    <link rel="stylesheet" href="AI.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Text to Image Generator</h1>
+        <label for="input" class="label">Generate a meme for the prompt:</label>
+        <input 
+            type="text" 
+            id="input" 
+            class="input" 
+            placeholder="Enter your meme prompt...">
+        <button 
+            id="btn" 
+            class="button">
+            Generate
+        </button>
+        <div class="image-container">
+            <img 
+                id="image" 
+                src="" 
+                alt="Generated meme" 
+                class="image">
+        </div>
+    </div>
+    <script src="/template/huggingface.js"></script>
+</body>
+</html>
