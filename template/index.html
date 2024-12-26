@@ -34,11 +34,23 @@
   <section class="relative bg-gradient-to-br from-yellow-400 to-orange-500 min-h-screen flex flex-col justify-center items-center text-center text-white pt-20">
     <h1 class="text-5xl font-extrabold mb-4">Unleash Your Inner Meme Creator!</h1>
     <p class="text-lg mb-8">Create, edit, and share memes in just a few clicks!</p>
-    <div class="flex space-x-4 mb-8">
-      <a href="home.html" class="bg-white text-orange-500 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-yellow-100">
+    <div href ="home.html" flex space-x-4 mb-8>
+      <button
+        id="startCreatingbtn"
+        class="bg-gradient-to-r from-orange-400 to-yellow-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg transform transition-all duration-300 hover:from-yellow-500 hover:to-orange-500 hover:scale-105 hover:shadow-2xl"
+      >
         Start Creating
-      </a>
+      </button>
     </div>
+    
+    <script>
+      document.getElementById("startCreatingBtn").addEventListener("click", function () {
+        window.location.href = "home.html";
+      });
+    </script>
+    
+    
+    </section>
     <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('https://source.unsplash.com/800x600/?fun,memes');"></div>
   </section>
 

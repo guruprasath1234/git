@@ -1,32 +1,28 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text to Image</title>
-    <link rel="stylesheet" href="AI.css">
-</head>
-<body>
-    <div class="container">
-        <h1 class="title">Text to Image Generator</h1>
-        <label for="input" class="label">Generate a meme for the prompt:</label>
-        <input 
-            type="text" 
-            id="input" 
-            class="input" 
-            placeholder="Enter your meme prompt...">
-        <button 
-            id="btn" 
-            class="button">
-            Generate
-        </button>
-        <div class="image-container">
-            <img 
-                id="image" 
-                src="" 
-                alt="Generated meme" 
-                class="image">
-        </div>
+    <head>
+        <meta name= "viewport" content= "width=device-width, initial-scale=1.0">
+       <title>Image Search Engine - Easy Tutorials</title>
+        <link rel= "stylesheet" href="AI.css">
+   </head>
+   <body>
+   <h1>Text To Image Generator</h1>
+    <form id="search-form">
+      <input type= "text" id="search-box" placeholder= "Search anything here...">
+     <button>Search</button>
+   </form>
+    <div id="search-result" ></div>
+    <button id="show-more-btn" >Show more</button>
+<!-- Add this HTML code inside the <body> of your HTML file -->
+    <div id="modal" class="modal">
+        <span class="close-button">&times;</span>
+        <img id="modal-image" class="modal-image" src="" alt="Preview Image">
+        <a id="modal-download-button" class="modal-download-button" href="" target="_blank" download>Download</a>
     </div>
-    <script src="/template/huggingface.js"></script>
-</body>
-</html>
+
+    
+
+    <script src="huggingface.js"></script>
+                                         
+   </body>
+   </html>
+   

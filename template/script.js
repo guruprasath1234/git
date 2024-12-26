@@ -71,4 +71,35 @@ document.getElementById('downloadMeme').addEventListener('click', () => {
     link.download = 'meme.png';
     link.href = canvas.toDataURL();
     link.click();
+
+    document.getElementById('shareMeme').addEventListener('click', async () => {
+        const canvas = document.getElementById('shareMeme');
+    
+        // Convert canvas to a Blob
+        canvas.toBlob(async (blob) => {
+            if (!blob) {
+                alert('Failed to generate the meme image. Try again.');
+                return;
+            }
+    
+            const file = new File([blob], 'meme.png', { type: 'image/png' });
+    
+            // Check if the Web Share API is available
+            if (navigator.share) {
+                try {
+                    await navigator.share({
+                        title: 'Check out my meme!',
+                        text: 'I created this meme using Meme Generator!',
+                        files: [file],
+                    });
+                    alert('Meme shared successfully!');
+                } catch (err) {
+                    console.error('Error sharing:', err);
+                }
+            } else {
+                alert('Your browser does not support the Web Share API.');
+            }
+        });
+    });
+    
 });
